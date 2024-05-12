@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: min(100% - 30px, 840px);
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+}
+
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-container input,
+.input-container select,
+.input-container button {
+    width: calc(18% - 10px);
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.container-table {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+table th {
+    background-color: #007bff;
+    color: #fff;
+    text-align: left;
+}
+
+.task-item:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#searchText {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#searchText::placeholder {
+    color: #999;
+}
+
+#addTaskBtn,
+#searchTXT {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#addTaskBtn:hover,
+#searchTXT:hover {
+    background-color: #0056b3;
+}
+
+#addTaskBtn:focus,
+#searchTXT:focus {
+    outline: none;
+}
+
+.btn-edit {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-edit:hover,
+.btn-edit:focus {
+    background-color: #218838;
+}
+
+.btn-delete {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc3545;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn-delete:hover,
+.btn-delete:focus {
+    background-color: #c82333;
+}
+
+
+.field {
+    flex: 1;
+    position: relative;
+}
+
+.field input {
+    width: fit-content;
+    color: #030104;
+    background: none;
+    padding: 0.625rem;
+    border: 2px solid #ccc;
+}
+
+.field label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    translate: 0.625rem 0.625rem;
+    color: #8e8e8e;
+    background-color: #fff;
+    padding-inline: 0.25rem;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    pointer-events: none;
+    transition: translate 230ms, background-color 250ms, border-color 250ms;
+}
+
+.field:focus-within label,
+.field:not(:has(:placeholder-shown)) label {
+    translate: 0.625rem -1rem;
+    border-color: #8AABBE;
+}
+
+.field:placeholder {
+    color: transparent;
+}
+
+.task-item:nth-child(even) {
+    background-color: #99c7ce;
+}
+
+.task-item:nth-child(odd) {
+    background-color: #8AABBe;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer small {
+    color: #888;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+
+    .field,
+    #addTaskBtn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

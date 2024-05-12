@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Task Manager</h1>
+    <div class="input-container">
+      <div class="field">
+        <input type="text" id="taskdescription" placeholder="Task Description">
+        <label for="taskdescription">Task Description</label>
+      </div>
+      <div class="field">
+        <input type="text" id="assignedto" placeholder="Assigned To">
+        <label for="assignedto">Assigned To</label>
+      </div>
+      <select name="Priority" id="Priority">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <input type="date" id="dueDate" placeholder="Due Date">
+      <select name="Status" id="Status">
+        <option value="Inprogress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
+      <button id="addTaskBtn">Add Task</button>
+    </div>
+    <input type="search" name="search" id="searchText" placeholder="Search your tasks here...">
+    <input type="submit" name="Search" value="Search" id="searchTXT">
+  </div>
+  <div class="container-table">
+    <table id="taskTable">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Assigned To</th>
+          <th>Priority</th>
+          <th>Due Date</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="taskList"></tbody>
+    </table>
+  </div>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="searchResults"></div>
+    </div>
+  </div>
+  <script src="./js/task.js"></script>
+  <footer>&copy; Copyrights reserved by Group 6</footer>
+  <!-- Group 6 members
+  Amogh Anand Phadnis
+  Daneesh Bashir Shaikh
+  Gautambhai Narendrabhai Rabari
+  Sruthi Bandi -->
+</body>
+</html>
